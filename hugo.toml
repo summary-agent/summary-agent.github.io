@@ -8,6 +8,13 @@ title = 'Summary Agent'
 # Single landing page — no tag/category pages.
 disableKinds = ['taxonomy', 'term']
 
+[services]
+  [services.googleAnalytics]
+    # PLACEHOLDER — replace with your real GA4 Measurement ID.
+    # Google Analytics → Admin → Data Streams → web stream → "Measurement ID".
+    # It looks like: G-XXXXXXXXXX
+    ID = 'G-XXXXXXXXXX'
+
 [params]
   tagline = 'Stop reading every PR'
   description = "An AI-written daily digest, personal to each teammate — your team's GitHub, Jira, Slack, and more, tuned to what you care about with your own work broken out, ready for standup."

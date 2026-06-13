@@ -14,6 +14,7 @@
   {{ with resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
+  {{ if hugo.IsProduction }}{{ template "_internal/google_analytics.html" . }}{{ end }}
 </head>
 <body>
   <header class="masthead">
