@@ -20,4 +20,4 @@ disableKinds = ['taxonomy', 'term']
   # PLACEHOLDER — replace with your real Google Form embed URL.
   # In Google Forms: Send → < > (embed) → copy the src of the iframe.
   # It looks like: https://docs.google.com/forms/d/e/<long-id>/viewform?embedded=true
-  googleFormEmbedUrl = 'https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true'
+  googleFormEmbedUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfUWgamBf2EjFXvZFW7lDjWMX_52EKsYW-JEEEHanjeUOPc_w/viewform?embedded=true'
