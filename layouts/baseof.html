@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.Title }} — {{ site.Params.tagline }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <meta property="og:title" content="{{ site.Title }} — {{ site.Params.tagline }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:type" content="website">
+  {{ with resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="logo">summary<span class="logo-accent">.ai</span></span>
+      <a class="btn btn-small" href="#waitlist">Join the waitlist</a>
+    </div>
+  </header>
+
+  {{ block "main" . }}{{ end }}
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© {{ now.Year }} summary.ai</span>
+    </div>
+  </footer>
+</body>
+</html>

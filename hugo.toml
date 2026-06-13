@@ -1,0 +1,18 @@
+# baseURL is overridden at deploy time by the GitHub Pages workflow
+# (.github/workflows/hugo.yml), so the placeholder value here only affects
+# local commands that print absolute URLs.
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'summary.ai'
+
+# Single landing page — no tag/category pages.
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  tagline = 'Stop reading every PR'
+  description = "One AI-written daily digest of your team's GitHub and Jira activity, posted to a chat your whole team actually reads."
+
+  # PLACEHOLDER — replace with your real Google Form embed URL.
+  # In Google Forms: Send → < > (embed) → copy the src of the iframe.
+  # It looks like: https://docs.google.com/forms/d/e/<long-id>/viewform?embedded=true
+  googleFormEmbedUrl = 'https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true'

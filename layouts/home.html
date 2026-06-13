@@ -1,0 +1,130 @@
+{{ define "main" }}
+<main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Stop reading every PR.</h1>
+      <p class="lede">
+        summary.ai turns your team's GitHub and Jira activity into <strong>one
+        AI-written daily digest</strong>, posted to a chat your whole team
+        actually reads.
+      </p>
+      <a class="btn btn-large" href="#waitlist">Join the waitlist</a>
+      <p class="hero-note">Early access · GitHub &amp; Jira connectors · Desktop app for teams</p>
+    </div>
+  </section>
+
+  <!-- Product mockup -->
+  <section class="mockup-section">
+    <div class="container">
+      <div class="app-window" role="img" aria-label="Mockup of the summary.ai desktop app showing a daily digest in the Updates channel">
+        <div class="titlebar">
+          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+          <span class="titlebar-name">summary.ai — Acme Engineering</span>
+        </div>
+        <div class="app-body">
+          <aside class="app-sidebar">
+            <div class="sidebar-group">Channels</div>
+            <div class="channel channel-active"># updates</div>
+            <div class="channel"># general</div>
+            <div class="channel"># releases</div>
+            <div class="sidebar-group">Connectors</div>
+            <div class="channel">⌁ GitHub</div>
+            <div class="channel">⌁ Jira</div>
+          </aside>
+          <div class="app-main">
+            <div class="channel-header"># updates</div>
+            <div class="message">
+              <div class="avatar">S</div>
+              <div class="message-body">
+                <div class="message-meta">
+                  <span class="message-author">summary.ai</span>
+                  <span class="bot-badge">APP</span>
+                  <span class="message-time">Today, 9:00 AM</span>
+                </div>
+                <div class="message-title">Daily digest — Thursday</div>
+                <p><strong>Shipped:</strong> payments-api <code>v2.4.1</code> tagged and released. 6 PRs merged, including the webhook retry fix (#482).</p>
+                <p><strong>In review:</strong> the Postgres connection-pool migration (#491) has two approvals and is waiting on a rebase.</p>
+                <p><strong>Heads up:</strong> PLAT-203 (rate-limit errors) was escalated to blocker in Jira; three related GitHub issues were linked overnight.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PTO feature band -->
+  <section class="pto-band">
+    <div class="container">
+      <span class="pto-kicker">✈ Out of office?</span>
+      <h2>Back from PTO? Read one digest, not 200 notifications.</h2>
+      <p>
+        The digests keep coming while you're out. Catch up on a week of merges,
+        releases, and escalations in one scroll of the Updates channel —
+        minutes, not your whole first morning back.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>One digest, every day</h3>
+          <p>
+            Connect GitHub and Jira, pick a time, done. Every day summary.ai
+            gathers PRs, issues, releases, and tickets — and AI writes the
+            update a teammate would: what shipped, what's stuck, what needs you.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Connectors, not copy-paste</h3>
+          <p>
+            GitHub (pull requests, issues, releases) and Jira (projects,
+            issues) today, with more on the way. Your tokens are encrypted in
+            the OS keychain and never leave your machine in plaintext.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Built for teams</h3>
+          <p>
+            A familiar, Slack-like desktop app. Digests land in a shared
+            Updates channel everyone sees. Per-seat licensing with Google
+            Workspace sign-in and an admin console for managing seats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section class="waitlist" id="waitlist">
+    <div class="container">
+      <h2>Be first in line</h2>
+      <p>
+        Leave your email and we'll let you know when summary.ai is ready for
+        your team.
+      </p>
+      {{ if strings.Contains site.Params.googleFormEmbedUrl "REPLACE_WITH" }}
+      <div class="form-placeholder">
+        <p><strong>Waitlist form not wired up yet.</strong></p>
+        <p>Set <code>googleFormEmbedUrl</code> in <code>hugo.toml</code> to your
+          Google Form's embed URL — see the README.</p>
+      </div>
+      {{ else }}
+      <div class="form-wrap">
+        <iframe
+          src="{{ site.Params.googleFormEmbedUrl }}"
+          title="summary.ai waitlist signup form"
+          width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0"
+          loading="lazy">Loading…</iframe>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+</main>
+{{ end }}
