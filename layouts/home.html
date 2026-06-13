@@ -4,7 +4,8 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Stop reading every PR.</h1>
+      <p class="kicker"><span class="kicker-rule"></span>The daily engineering digest<span class="kicker-rule"></span></p>
+      <h1>Stop reading <em>every</em> PR.</h1>
       <p class="lede">
         summary.ai turns your team's GitHub and Jira activity into <strong>one
         AI-written daily digest</strong>, posted to a chat your whole team
@@ -52,15 +53,16 @@
           </div>
         </div>
       </div>
+      <p class="mockup-caption">Fig. 1 — the Updates channel, 9:00 AM, every day.</p>
     </div>
   </section>
 
-  <!-- PTO feature band -->
+  <!-- PTO pull-quote band -->
   <section class="pto-band">
     <div class="container">
-      <span class="pto-kicker">✈ Out of office?</span>
-      <h2>Back from PTO? Read one digest, not 200 notifications.</h2>
-      <p>
+      <p class="kicker kicker-accent">✈ Out of office</p>
+      <h2>Back from PTO? Read <em>one digest</em>, not 200&nbsp;notifications.</h2>
+      <p class="band-copy">
         The digests keep coming while you're out. Catch up on a week of merges,
         releases, and escalations in one scroll of the Updates channel —
         minutes, not your whole first morning back.
@@ -68,11 +70,13 @@
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Features: newspaper columns -->
   <section class="features">
     <div class="container">
+      <p class="kicker"><span class="kicker-rule"></span>What you get<span class="kicker-rule"></span></p>
       <div class="feature-grid">
         <div class="feature">
+          <span class="feature-no">№ 1</span>
           <h3>One digest, every day</h3>
           <p>
             Connect GitHub and Jira, pick a time, done. Every day summary.ai
@@ -81,6 +85,7 @@
           </p>
         </div>
         <div class="feature">
+          <span class="feature-no">№ 2</span>
           <h3>Connectors, not copy-paste</h3>
           <p>
             GitHub (pull requests, issues, releases) and Jira (projects,
@@ -89,6 +94,7 @@
           </p>
         </div>
         <div class="feature">
+          <span class="feature-no">№ 3</span>
           <h3>Built for teams</h3>
           <p>
             A familiar, Slack-like desktop app. Digests land in a shared
@@ -100,29 +106,32 @@
     </div>
   </section>
 
-  <!-- Waitlist -->
+  <!-- Waitlist: subscription coupon -->
   <section class="waitlist" id="waitlist">
     <div class="container">
-      <h2>Be first in line</h2>
-      <p>
-        Leave your email and we'll let you know when summary.ai is ready for
-        your team.
-      </p>
-      {{ if strings.Contains site.Params.googleFormEmbedUrl "REPLACE_WITH" }}
-      <div class="form-placeholder">
-        <p><strong>Waitlist form not wired up yet.</strong></p>
-        <p>Set <code>googleFormEmbedUrl</code> in <code>hugo.toml</code> to your
-          Google Form's embed URL — see the README.</p>
+      <div class="coupon">
+        <span class="coupon-scissors" aria-hidden="true">✂</span>
+        <h2>Subscribe to the waitlist</h2>
+        <p>
+          Leave your email and we'll let you know when summary.ai is ready for
+          your team.
+        </p>
+        {{ if strings.Contains site.Params.googleFormEmbedUrl "REPLACE_WITH" }}
+        <div class="form-placeholder">
+          <p><strong>Waitlist form not wired up yet.</strong></p>
+          <p>Set <code>googleFormEmbedUrl</code> in <code>hugo.toml</code> to your
+            Google Form's embed URL — see the README.</p>
+        </div>
+        {{ else }}
+        <div class="form-wrap">
+          <iframe
+            src="{{ site.Params.googleFormEmbedUrl }}"
+            title="summary.ai waitlist signup form"
+            width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0"
+            loading="lazy">Loading…</iframe>
+        </div>
+        {{ end }}
       </div>
-      {{ else }}
-      <div class="form-wrap">
-        <iframe
-          src="{{ site.Params.googleFormEmbedUrl }}"
-          title="summary.ai waitlist signup form"
-          width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0"
-          loading="lazy">Loading…</iframe>
-      </div>
-      {{ end }}
     </div>
   </section>
 

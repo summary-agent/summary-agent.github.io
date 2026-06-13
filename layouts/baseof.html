@@ -8,14 +8,18 @@
   <meta property="og:title" content="{{ site.Title }} — {{ site.Params.tagline }}">
   <meta property="og:description" content="{{ site.Params.description }}">
   <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   {{ with resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
+  <header class="masthead">
+    <div class="container masthead-inner">
       <span class="logo">summary<span class="logo-accent">.ai</span></span>
+      <span class="dateline">Vol. 001 · {{ now.Format "Monday, January 2, 2006" }}</span>
       <a class="btn btn-small" href="#waitlist">Join the waitlist</a>
     </div>
   </header>
@@ -25,6 +29,7 @@
   <footer class="site-footer">
     <div class="container">
       <span>© {{ now.Year }} summary.ai</span>
+      <span class="footer-motto">All the news that's fit to ship.</span>
     </div>
   </footer>
 </body>
