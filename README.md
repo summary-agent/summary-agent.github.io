@@ -1,6 +1,6 @@
-# summary.ai — marketing site
+# Summary Agent — marketing site
 
-Static marketing/landing site for summary.ai, built with [Hugo](https://gohugo.io)
+Static marketing/landing site for Summary Agent (summary-agent.io), built with [Hugo](https://gohugo.io)
 (no theme — the few templates live in `layouts/`). One page: hero, a CSS mockup of
 the desktop app, features, and a waitlist signup via an embedded Google Form.
 
@@ -36,10 +36,11 @@ It is inert until:
 1. This repo has a GitHub origin and the branch is pushed.
 2. Pages is enabled on the repo: **Settings → Pages → Source: GitHub Actions**.
 
-The workflow injects the correct `baseURL` for the Pages domain, so the
-placeholder `baseURL` in `hugo.toml` never needs to change. For a custom domain
-later, configure it under Settings → Pages and the workflow picks it up
-automatically.
+The site is served at the custom domain **summary-agent.io**. `static/CNAME`
+(emitted to the build as `/CNAME`) tells GitHub Pages which domain to bind;
+also set it under **Settings → Pages → Custom domain** and point the domain's
+DNS at GitHub Pages. The workflow injects the matching `baseURL` at deploy time,
+so the value in `hugo.toml` is mainly for local builds.
 
 ## Layout
 

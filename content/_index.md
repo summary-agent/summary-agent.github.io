@@ -1,3 +1,3 @@
 ---
-title: summary.ai
+title: Summary Agent
 ---

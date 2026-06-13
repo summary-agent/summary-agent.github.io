@@ -1,9 +1,9 @@
-# baseURL is overridden at deploy time by the GitHub Pages workflow
-# (.github/workflows/hugo.yml), so the placeholder value here only affects
-# local commands that print absolute URLs.
-baseURL = 'https://example.org/'
+# Production domain. The GitHub Pages workflow (.github/workflows/hugo.yml)
+# re-injects the Pages base URL at deploy time, so this value mainly affects
+# local builds — but it should match the real custom domain (see static/CNAME).
+baseURL = 'https://summary-agent.io/'
 locale = 'en-us'
-title = 'summary.ai'
+title = 'Summary Agent'
 
 # Single landing page — no tag/category pages.
 disableKinds = ['taxonomy', 'term']
