@@ -8,8 +8,9 @@
       <h1>Stop reading <em>every</em> PR.</h1>
       <p class="lede">
         Summary Agent turns activity from your team's tools — GitHub, Jira,
-        Slack, and more — into <strong>one AI-written daily digest</strong>,
-        posted to a chat your whole team actually reads.
+        Slack, and more — into <strong>an AI-written daily digest, personal to
+        each teammate</strong>: tuned to what they care about, with their own
+        work broken out, ready for standup.
       </p>
       <a class="btn btn-large" href="#waitlist">Join the waitlist</a>
       <p class="hero-note">Early access · GitHub, Jira, Slack &amp; more · Desktop app for teams</p>
@@ -19,7 +20,7 @@
   <!-- Product mockup -->
   <section class="mockup-section">
     <div class="container">
-      <div class="app-window" role="img" aria-label="Mockup of the Summary Agent desktop app showing a daily digest in the Updates channel">
+      <div class="app-window" role="img" aria-label="Mockup of the Summary Agent desktop app showing a personalized daily digest delivered as a direct message, with the reader's own work broken out from the rest of the team's">
         <div class="titlebar">
           <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
           <span class="titlebar-name">Summary Agent — Acme Engineering</span>
@@ -27,9 +28,10 @@
         <div class="app-body">
           <aside class="app-sidebar">
             <div class="sidebar-group">Channels</div>
-            <div class="channel channel-active"># updates</div>
             <div class="channel"># general</div>
             <div class="channel"># releases</div>
+            <div class="sidebar-group">Direct messages</div>
+            <div class="channel channel-active">✦ Summary Agent</div>
             <div class="sidebar-group">Connectors</div>
             <div class="channel">⌁ GitHub</div>
             <div class="channel">⌁ Jira</div>
@@ -37,7 +39,7 @@
             <div class="channel">⌁ Calendar</div>
           </aside>
           <div class="app-main">
-            <div class="channel-header"># updates</div>
+            <div class="channel-header">✦ Summary Agent</div>
             <div class="message">
               <div class="avatar">S</div>
               <div class="message-body">
@@ -46,17 +48,17 @@
                   <span class="bot-badge">APP</span>
                   <span class="message-time">Today, 9:00 AM</span>
                 </div>
-                <div class="message-title">Daily digest — Thursday</div>
-                <p><strong>Shipped:</strong> payments-api <code>v2.4.1</code> tagged and released. 6 PRs merged, including the webhook retry fix (#482).</p>
-                <p><strong>In review:</strong> the Postgres connection-pool migration (#491) has two approvals and is waiting on a rebase.</p>
-                <p><strong>Heads up:</strong> PLAT-203 (rate-limit errors) was escalated to blocker in Jira; three related GitHub issues were linked overnight.</p>
-                <p><strong>Out today:</strong> Dana (back Monday) — coverage for on-call is with Priya.</p>
+                <div class="message-title">Your daily digest — Thursday</div>
+                <p><strong>Yesterday, you:</strong> merged the webhook retry fix (#482) and opened the Postgres connection-pool migration (#491) — now waiting on review.</p>
+                <p><strong>Across the team:</strong> payments-api <code>v2.4.1</code> shipped (6 PRs merged); the search reindex landed in staging.</p>
+                <p><strong>Heads up:</strong> PLAT-203 (rate-limit errors) was escalated to blocker in Jira — it touches your migration.</p>
+                <p><strong>Out today:</strong> Dana (back Monday); on-call coverage is with Priya.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <p class="mockup-caption">Fig. 1 — the Updates channel, 9:00 AM, every day.</p>
+      <p class="mockup-caption">Fig. 1 — your personal digest, 9:00 AM, every day.</p>
     </div>
   </section>
 
@@ -82,11 +84,12 @@
       <div class="feature-grid">
         <div class="feature">
           <span class="feature-no">№ 1</span>
-          <h3>One digest, every day</h3>
+          <h3>A digest that's yours</h3>
           <p>
-            Connect GitHub and Jira, pick a time, done. Every day Summary Agent
-            gathers PRs, issues, releases, and tickets — and AI writes the
-            update a teammate would: what shipped, what's stuck, what needs you.
+            Pick the repos, projects, and channels you care about — Summary
+            Agent writes you a daily digest tuned to exactly that. Your own
+            work is broken out from everyone else's, so your standup is already
+            written.
           </p>
         </div>
         <div class="feature">
@@ -103,8 +106,8 @@
           <span class="feature-no">№ 3</span>
           <h3>Built for teams</h3>
           <p>
-            A familiar, Slack-like desktop app. Digests land in a shared
-            Updates channel everyone sees. Per-seat licensing with Google
+            A familiar, Slack-like desktop app where everyone gets their own
+            digest — no shared channel to mute. Per-seat licensing with Google
             Workspace sign-in and an admin console for managing seats.
           </p>
         </div>

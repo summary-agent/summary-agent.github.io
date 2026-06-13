@@ -10,7 +10,7 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   tagline = 'Stop reading every PR'
-  description = "One AI-written daily digest of your team's GitHub, Jira, Slack, and more, posted to a chat your whole team actually reads."
+  description = "An AI-written daily digest, personal to each teammate — your team's GitHub, Jira, Slack, and more, tuned to what you care about with your own work broken out, ready for standup."
 
   # PLACEHOLDER — replace with your real Google Form embed URL.
   # In Google Forms: Send → < > (embed) → copy the src of the iframe.
