@@ -10,8 +10,9 @@ This site is pure static output. The product itself lives in the sibling repos
 ## Run it locally
 
 ```sh
-hugo server   # live-reload dev server on :1313
-hugo          # production build into public/
+make dev      # hugo server — live-reload dev server on :1313
+make build    # hugo --gc --minify — production build into public/
+make clean    # remove build output
 ```
 
 Requires only the Hugo binary (`brew install hugo`).
