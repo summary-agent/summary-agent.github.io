@@ -75,6 +75,114 @@
     </div>
   </section>
 
+  <!-- Sample digests: pick a desk, three personal feeds from one activity stream -->
+  <section class="sample" id="sample">
+    <div class="container">
+      <p class="kicker"><span class="kicker-rule"></span>A digest for every desk<span class="kicker-rule"></span></p>
+      <h2>Same activity. <em>Three</em> very different mornings.</h2>
+      <p class="sample-intro">
+        One stream of GitHub, Jira, and Slack activity — read three ways. Pick a
+        desk and see the digest that person gets.
+      </p>
+
+      <div class="sample-tabs">
+        <input type="radio" name="persona" id="p-dev" class="persona-radio persona-dev" checked>
+        <input type="radio" name="persona" id="p-mgr" class="persona-radio persona-mgr">
+        <input type="radio" name="persona" id="p-pto" class="persona-radio persona-pto">
+
+        <div class="tab-labels" role="tablist" aria-label="Choose whose digest to preview">
+          <label for="p-dev" class="tab tab-dev">Maya · Backend</label>
+          <label for="p-mgr" class="tab tab-mgr">Sam · Eng Manager</label>
+          <label for="p-pto" class="tab tab-pto">Leo · Back from PTO</label>
+        </div>
+
+        <div class="app-window" role="img" aria-label="Mockup of the Summary Agent desktop app showing how the same team activity becomes a different personal digest for a backend engineer, an engineering manager, and someone returning from time off">
+          <div class="titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="titlebar-name">Summary Agent — Acme Engineering</span>
+          </div>
+          <div class="app-body">
+            <aside class="app-sidebar">
+              <div class="sidebar-group">Summary Agent</div>
+              <div class="channel channel-active">Updates</div>
+              <div class="channel">Mentions</div>
+              <div class="sidebar-group">Connectors</div>
+              <div class="channel">⌁ GitHub</div>
+              <div class="channel">⌁ Jira</div>
+              <div class="channel">⌁ Slack</div>
+              <div class="channel">⌁ Calendar</div>
+            </aside>
+            <div class="app-main">
+              <div class="channel-header">Updates</div>
+
+              <!-- Maya · Backend engineer (IC) -->
+              <div class="sample-panel panel-dev">
+                <div class="message">
+                  <div class="avatar">S</div>
+                  <div class="message-body">
+                    <div class="message-meta">
+                      <span class="message-author">Summary Agent</span>
+                      <span class="bot-badge">APP</span>
+                      <span class="message-time">Today, 9:00 AM</span>
+                    </div>
+                    <div class="message-title">Your daily digest — Thursday</div>
+                    <p><strong>Yesterday, you:</strong> merged the webhook retry fix (#482) and opened the Postgres connection-pool migration (#491) — now waiting on review from Priya.</p>
+                    <p><strong>On your plate:</strong> 2 PRs are waiting on <em>your</em> review — <code>auth-service</code> #488 (open 2 days) and <code>billing</code> #490.</p>
+                    <p><strong>Heads up:</strong> PLAT-203 (rate-limit errors) was escalated to blocker in Jira — it touches your migration.</p>
+                    <p><strong>Across the team:</strong> payments-api <code>v2.4.1</code> shipped (6 PRs merged); the search reindex landed in staging.</p>
+                    <p><strong>Out today:</strong> Dana (back Monday); on-call coverage is with Priya.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sam · Engineering manager -->
+              <div class="sample-panel panel-mgr">
+                <div class="message">
+                  <div class="avatar">S</div>
+                  <div class="message-body">
+                    <div class="message-meta">
+                      <span class="message-author">Summary Agent</span>
+                      <span class="bot-badge">APP</span>
+                      <span class="message-time">Today, 8:30 AM</span>
+                    </div>
+                    <div class="message-title">Team digest — Thursday</div>
+                    <p><strong>Shipped yesterday:</strong> 11 PRs merged across 4 services; payments-api <code>v2.4.1</code> released to production.</p>
+                    <p><strong>In flight:</strong> search reindex is in staging (Maya); the checkout redesign is behind a flag at 25% rollout.</p>
+                    <p><strong>Risks:</strong> PLAT-203 (rate-limit errors) escalated to blocker — owned by Maya, due tomorrow. CI on <code>auth-service</code> has been flaky (3 reruns this week).</p>
+                    <p><strong>Review load:</strong> 9 PRs open more than 24h; Priya is carrying the most (5 awaiting her).</p>
+                    <p><strong>People:</strong> Dana out today (back Monday), on-call is Priya; Leo is back Monday from PTO.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Leo · Back from a week of PTO -->
+              <div class="sample-panel panel-pto">
+                <div class="message">
+                  <div class="avatar">S</div>
+                  <div class="message-body">
+                    <div class="message-meta">
+                      <span class="message-author">Summary Agent</span>
+                      <span class="bot-badge">APP</span>
+                      <span class="message-time">Today, 9:00 AM</span>
+                    </div>
+                    <div class="message-title">Your catch-up digest — back from PTO (Jun 6–13)</div>
+                    <p><strong>While you were out:</strong> payments-api went <code>v2.3.0</code> → <code>v2.4.1</code> (19 PRs merged). The connection-pool migration you flagged before leaving is now merged (#491).</p>
+                    <p><strong>Waited on you:</strong> 3 review requests came in — 2 were picked up by others, 1 is still open (<code>search</code> #477).</p>
+                    <p><strong>Decisions made:</strong> the team adopted OpenTelemetry for logging (RFC-12 approved); staging now auto-deploys on merge.</p>
+                    <p><strong>Needs your context:</strong> PLAT-203 (rate-limit blocker) is parked pending your read on the retry logic.</p>
+                    <p><strong>This week:</strong> Dana is out today (back Monday with you); planning moved to Tuesday.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mockup-caption">Fig. 2 — one activity stream, written for whoever's reading.</p>
+    </div>
+  </section>
+
   <!-- Features: newspaper columns -->
   <section class="features">
     <div class="container">
