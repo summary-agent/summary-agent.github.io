@@ -17,79 +17,15 @@
     </div>
   </section>
 
-  <!-- Product mockup -->
+  <!-- Product mockup: one activity stream, three personal digests (CSS-only tabs) -->
   <section class="mockup-section">
     <div class="container">
-      <div class="app-window" role="img" aria-label="Mockup of the Summary Agent desktop app showing a personalized daily digest in the Updates view, with the reader's own work broken out from the rest of the team's">
-        <div class="titlebar">
-          <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
-          <span class="titlebar-name">Summary Agent — Acme Engineering</span>
-        </div>
-        <div class="app-body">
-          <aside class="app-sidebar">
-            <div class="sidebar-group">Summary Agent</div>
-            <div class="channel channel-active">Updates</div>
-            <div class="channel">Mentions</div>
-            <div class="sidebar-group">Connectors</div>
-            <div class="channel">⌁ GitHub</div>
-            <div class="channel">⌁ Jira</div>
-            <div class="channel">⌁ Slack</div>
-            <div class="channel">⌁ Calendar</div>
-          </aside>
-          <div class="app-main">
-            <div class="channel-header">Updates</div>
-            <div class="message">
-              <div class="avatar">S</div>
-              <div class="message-body">
-                <div class="message-meta">
-                  <span class="message-author">Summary Agent</span>
-                  <span class="bot-badge">APP</span>
-                  <span class="message-time">Today, 9:00 AM</span>
-                </div>
-                <div class="message-title">Your daily digest — Thursday</div>
-                <p><strong>Yesterday, you:</strong> merged the webhook retry fix (#482) and opened the Postgres connection-pool migration (#491) — now waiting on review.</p>
-                <p><strong>Across the team:</strong> payments-api <code>v2.4.1</code> shipped (6 PRs merged); the search reindex landed in staging.</p>
-                <p><strong>Heads up:</strong> PLAT-203 (rate-limit errors) was escalated to blocker in Jira — it touches your migration.</p>
-                <p><strong>Out today:</strong> Dana (back Monday); on-call coverage is with Priya.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p class="mockup-caption">Fig. 1 — your personal digest, 9:00 AM, every day.</p>
-    </div>
-  </section>
-
-  <!-- PTO pull-quote band -->
-  <section class="pto-band">
-    <div class="container">
-      <p class="kicker kicker-accent">✈ Out of office</p>
-      <h2>Back from PTO? Read <em>one digest</em>, not 200&nbsp;notifications.</h2>
-      <p class="band-copy">
-        Summary Agent syncs time off from tools like BambooHR and your calendar, so it knows
-        when you're out: your team sees who's away and who's covering, and a
-        catch-up digest covering exactly the days you missed is waiting when
-        you're back. A week of merges, releases, and escalations in one read —
-        minutes, not your whole first morning.
-      </p>
-    </div>
-  </section>
-
-  <!-- Sample digests: pick a desk, three personal feeds from one activity stream -->
-  <section class="sample" id="sample">
-    <div class="container">
-      <p class="kicker"><span class="kicker-rule"></span>A digest for every desk<span class="kicker-rule"></span></p>
-      <h2>Same activity. <em>Three</em> very different mornings.</h2>
-      <p class="sample-intro">
-        One stream of GitHub, Jira, and Slack activity — read three ways. Pick a
-        desk and see the digest that person gets.
-      </p>
-
       <div class="sample-tabs">
         <input type="radio" name="persona" id="p-dev" class="persona-radio persona-dev" checked>
         <input type="radio" name="persona" id="p-mgr" class="persona-radio persona-mgr">
         <input type="radio" name="persona" id="p-pto" class="persona-radio persona-pto">
 
+        <p class="sample-cue">Same activity — read three ways:</p>
         <div class="tab-labels" role="tablist" aria-label="Choose whose digest to preview">
           <label for="p-dev" class="tab tab-dev">Maya · Backend</label>
           <label for="p-mgr" class="tab tab-mgr">Sam · Eng Manager</label>
@@ -179,7 +115,22 @@
           </div>
         </div>
       </div>
-      <p class="mockup-caption">Fig. 2 — one activity stream, written for whoever's reading.</p>
+      <p class="mockup-caption">Fig. 1 — one activity stream, written for whoever's reading.</p>
+    </div>
+  </section>
+
+  <!-- PTO pull-quote band -->
+  <section class="pto-band">
+    <div class="container">
+      <p class="kicker kicker-accent">✈ Out of office</p>
+      <h2>Back from PTO? Read <em>one digest</em>, not 200&nbsp;notifications.</h2>
+      <p class="band-copy">
+        Summary Agent syncs time off from tools like BambooHR and your calendar, so it knows
+        when you're out: your team sees who's away and who's covering, and a
+        catch-up digest covering exactly the days you missed is waiting when
+        you're back. A week of merges, releases, and escalations in one read —
+        minutes, not your whole first morning.
+      </p>
     </div>
   </section>
 

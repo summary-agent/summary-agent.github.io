@@ -297,24 +297,18 @@ code {
   margin: 0 auto;
 }
 
-/* Sample digests: pick a desk, three personal feeds from one activity stream.
+/* Sample digests: one activity stream, three personal feeds. The mockup's
    CSS-only tabs — hidden radios drive which panel and which label is active. */
-.sample { padding: 72px 0; }
-.sample h2 {
-  text-align: center;
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
-  font-weight: 560;
-  max-width: 680px;
-  margin: 0 auto 0.4em;
-}
-.sample-intro {
-  text-align: center;
-  color: var(--ink-soft);
-  font-size: 1.15rem;
-  max-width: 580px;
-  margin: 0 auto 8px;
-}
 .sample-tabs { position: relative; }
+.sample-cue {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
 
 /* Visually hidden but keyboard-focusable. */
 .persona-radio {
